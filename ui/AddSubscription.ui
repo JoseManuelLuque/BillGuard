@@ -5,7 +5,7 @@
   <property name="geometry">
    <rect>
     <x>0</x>
-    <y>0</x>
+    <y>0</y>
     <width>400</width>
     <height>300</height>
    </rect>
@@ -65,7 +65,7 @@
         <bool>true</bool>
        </property>
        <property name="displayFormat">
-        <string>yyyy-MM-dd</string>
+        <string>dd/MM/yyyy</string>
        </property>
       </widget>
      </item>
@@ -86,7 +86,7 @@
         <bool>true</bool>
        </property>
        <property name="displayFormat">
-        <string>yyyy-MM-dd</string>
+        <string>dd/MM/yyyy</string>
        </property>
       </widget>
      </item>

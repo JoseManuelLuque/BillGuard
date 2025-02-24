@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddPaymentMethod</class>
+ <widget class="QDialog" name="AddPaymentMethod">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Agregar Método de Pago</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutNombre">
+     <item>
+      <widget class="QLabel" name="labelNombre">
+       <property name="text">
+        <string>Nombre:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="inputNombre">
+       <property name="placeholderText">
+        <string>Nombre</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutTipo">
+     <item>
+      <widget class="QLabel" name="labelTipo">
+       <property name="text">
+        <string>Tipo:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboTipo">
+       <item>
+        <property name="text">
+         <string>Cuenta bancaria</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Tarjeta de crédito</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Tarjeta de débito</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutNumero">
+     <item>
+      <widget class="QLabel" name="labelNumero">
+       <property name="text">
+        <string>Número:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="inputNumero">
+       <property name="placeholderText">
+        <string>Número</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutFechaVencimiento">
+     <item>
+      <widget class="QLabel" name="labelFechaVencimiento">
+       <property name="text">
+        <string>Fecha de Vencimiento:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDateEdit" name="inputFechaVencimiento">
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+       <property name="displayFormat">
+        <string>dd/MM/yyyy</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnSave">
+     <property name="text">
+      <string>Guardar</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

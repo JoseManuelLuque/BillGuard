@@ -5,7 +5,7 @@
   <property name="geometry">
    <rect>
     <x>0</x>
-    <y>0</y>
+    <y>0</x>
     <width>800</width>
     <height>600</height>
    </rect>
@@ -70,6 +70,13 @@
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QPushButton" name="btnModificarSuscripcion">
+         <property name="text">
+          <string>Modificar Suscripción</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
      <widget class="QWidget" name="pageHistorialPagos">
@@ -81,6 +88,25 @@
       <attribute name="title">
        <string>Métodos de Pago</string>
       </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QListWidget" name="listMetodosPago"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnAgregarMetodoPago">
+         <property name="text">
+          <string>Agregar Método de Pago</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnEliminarMetodoPago">
+         <property name="text">
+          <string>Eliminar Método de Pago</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="pageNotificaciones">
       <attribute name="title">

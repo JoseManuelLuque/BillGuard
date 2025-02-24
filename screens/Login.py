@@ -25,9 +25,12 @@ class LoginApp(QWidget):
             self.main_app.main_window.load_suscripciones()
             self.main_app.stack.setCurrentWidget(self.main_app.main_window)
         except Exception as e:
-            error_json = e.args[1]
-            error = json.loads(error_json)['error']['message']
-            QMessageBox.warning(self, "Error", f"Error al iniciar sesión: {error}")
+            if len(e.args) > 1:
+                error_json = e.args[1]
+                error = json.loads(error_json)['error']['message']
+                QMessageBox.warning(self, "Error", f"Error al iniciar sesión: {error}")
+            else:
+                QMessageBox.warning(self, "Error", f"Error al iniciar sesión: {str(e)}")
 
     def go_to_register(self):
         self.main_app.stack.setCurrentWidget(self.main_app.register_window)
