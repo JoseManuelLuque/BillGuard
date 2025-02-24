@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QWidget" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestor de Suscripciones</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="btnSuscripciones">
+       <property name="text">
+        <string>Suscripciones</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnHistorialPagos">
+       <property name="text">
+        <string>Historial de Pagos</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnMetodosPago">
+       <property name="text">
+        <string>Métodos de Pago</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnNotificaciones">
+       <property name="text">
+        <string>Notificaciones</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <widget class="QWidget" name="pageSuscripciones">
+      <attribute name="title">
+       <string>Suscripciones</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QListWidget" name="listSuscripciones"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnAgregarSuscripcion">
+         <property name="text">
+          <string>Agregar Suscripción</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnEliminarSuscripcion">
+         <property name="text">
+          <string>Eliminar Suscripción</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="pageHistorialPagos">
+      <attribute name="title">
+       <string>Historial de Pagos</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="pageMetodosPago">
+      <attribute name="title">
+       <string>Métodos de Pago</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="pageNotificaciones">
+      <attribute name="title">
+       <string>Notificaciones</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddSubscription</class>
+ <widget class="QDialog" name="AddSubscription">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</x>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Agregar Suscripción</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutNombreServicio">
+     <item>
+      <widget class="QLabel" name="labelNombreServicio">
+       <property name="text">
+        <string>Nombre del Servicio:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="inputNombreServicio">
+       <property name="placeholderText">
+        <string>Nombre del Servicio</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutCostoMensual">
+     <item>
+      <widget class="QLabel" name="labelCostoMensual">
+       <property name="text">
+        <string>Costo Mensual:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="inputCostoMensual">
+       <property name="placeholderText">
+        <string>Costo Mensual</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutFechaInicio">
+     <item>
+      <widget class="QLabel" name="labelFechaInicio">
+       <property name="text">
+        <string>Fecha de Inicio:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDateEdit" name="inputFechaInicio">
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+       <property name="displayFormat">
+        <string>yyyy-MM-dd</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutFechaRenovacion">
+     <item>
+      <widget class="QLabel" name="labelFechaRenovacion">
+       <property name="text">
+        <string>Fecha de Renovación:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDateEdit" name="inputFechaRenovacion">
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+       <property name="displayFormat">
+        <string>yyyy-MM-dd</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutEstado">
+     <item>
+      <widget class="QLabel" name="labelEstado">
+       <property name="text">
+        <string>Estado:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboEstado">
+       <item>
+        <property name="text">
+         <string>Activo</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Pausado</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Cancelado</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QPushButton" name="btnSave">
+     <property name="text">
+      <string>Guardar</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
