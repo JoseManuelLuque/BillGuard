@@ -26,11 +26,11 @@ class Ui_Register(object):
         Register.resize(400, 471)
         Register.setMinimumSize(QSize(400, 471))
         Register.setStyleSheet(u"/* Estilo general del fondo */\n"
-"QWidget#Login {\n"
+"QWidget#Register {\n"
 "    background-color: #F5F5F5;\n"
 "}\n"
 "\n"
-"/* Estilo del t\u00edtulo \"Iniciar Sesi\u00f3n\" */\n"
+"/* Estilo del t\u00edtulo \"Registrarse\" */\n"
 "QLabel#Loginlabel {\n"
 "    background-color: #85BB65;\n"
 "    color: white;\n"
@@ -70,17 +70,14 @@ class Ui_Register(object):
 "    background-color: #6FA24C;\n"
 "}\n"
 "QPushButton:pressed {\n"
-"    background-color:"
-                        " #5C8E3E;\n"
+"    background-color: #5C8"
+                        "E3E;\n"
 "}")
-        self.verticalLayoutWidget = QWidget(Register)
-        self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
-        self.verticalLayoutWidget.setGeometry(QRect(0, 0, 401, 502))
-        self.ColumnaPrincipal = QVBoxLayout(self.verticalLayoutWidget)
+        self.ColumnaPrincipal = QVBoxLayout(Register)
         self.ColumnaPrincipal.setSpacing(16)
         self.ColumnaPrincipal.setObjectName(u"ColumnaPrincipal")
         self.ColumnaPrincipal.setContentsMargins(16, 16, 16, 16)
-        self.Loginlabel = QLabel(self.verticalLayoutWidget)
+        self.Loginlabel = QLabel(Register)
         self.Loginlabel.setObjectName(u"Loginlabel")
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -96,31 +93,31 @@ class Ui_Register(object):
 
         self.Campos = QVBoxLayout()
         self.Campos.setObjectName(u"Campos")
-        self.UsuarioLabell = QLabel(self.verticalLayoutWidget)
+        self.UsuarioLabell = QLabel(Register)
         self.UsuarioLabell.setObjectName(u"UsuarioLabell")
         sizePolicy.setHeightForWidth(self.UsuarioLabell.sizePolicy().hasHeightForWidth())
         self.UsuarioLabell.setSizePolicy(sizePolicy)
 
         self.Campos.addWidget(self.UsuarioLabell)
 
-        self.UsuarioEdit = QLineEdit(self.verticalLayoutWidget)
+        self.UsuarioEdit = QLineEdit(Register)
         self.UsuarioEdit.setObjectName(u"UsuarioEdit")
 
         self.Campos.addWidget(self.UsuarioEdit)
 
-        self.EmailLabel = QLabel(self.verticalLayoutWidget)
+        self.EmailLabel = QLabel(Register)
         self.EmailLabel.setObjectName(u"EmailLabel")
         sizePolicy.setHeightForWidth(self.EmailLabel.sizePolicy().hasHeightForWidth())
         self.EmailLabel.setSizePolicy(sizePolicy)
 
         self.Campos.addWidget(self.EmailLabel)
 
-        self.EmailEdit = QLineEdit(self.verticalLayoutWidget)
+        self.EmailEdit = QLineEdit(Register)
         self.EmailEdit.setObjectName(u"EmailEdit")
 
         self.Campos.addWidget(self.EmailEdit)
 
-        self.ContrasnaLabel = QLabel(self.verticalLayoutWidget)
+        self.ContrasnaLabel = QLabel(Register)
         self.ContrasnaLabel.setObjectName(u"ContrasnaLabel")
         sizePolicy.setHeightForWidth(self.ContrasnaLabel.sizePolicy().hasHeightForWidth())
         self.ContrasnaLabel.setSizePolicy(sizePolicy)
@@ -128,12 +125,12 @@ class Ui_Register(object):
 
         self.Campos.addWidget(self.ContrasnaLabel)
 
-        self.PasswordEdit = QLineEdit(self.verticalLayoutWidget)
+        self.PasswordEdit = QLineEdit(Register)
         self.PasswordEdit.setObjectName(u"PasswordEdit")
 
         self.Campos.addWidget(self.PasswordEdit)
 
-        self.RepeatPassword = QLabel(self.verticalLayoutWidget)
+        self.RepeatPassword = QLabel(Register)
         self.RepeatPassword.setObjectName(u"RepeatPassword")
         sizePolicy.setHeightForWidth(self.RepeatPassword.sizePolicy().hasHeightForWidth())
         self.RepeatPassword.setSizePolicy(sizePolicy)
@@ -141,7 +138,7 @@ class Ui_Register(object):
 
         self.Campos.addWidget(self.RepeatPassword)
 
-        self.RepeatPasswordEdit = QLineEdit(self.verticalLayoutWidget)
+        self.RepeatPasswordEdit = QLineEdit(Register)
         self.RepeatPasswordEdit.setObjectName(u"RepeatPasswordEdit")
 
         self.Campos.addWidget(self.RepeatPasswordEdit)
@@ -151,12 +148,12 @@ class Ui_Register(object):
 
         self.Botones = QHBoxLayout()
         self.Botones.setObjectName(u"Botones")
-        self.BackButon = QPushButton(self.verticalLayoutWidget)
+        self.BackButon = QPushButton(Register)
         self.BackButon.setObjectName(u"BackButon")
 
         self.Botones.addWidget(self.BackButon)
 
-        self.RegisterButtom = QPushButton(self.verticalLayoutWidget)
+        self.RegisterButtom = QPushButton(Register)
         self.RegisterButtom.setObjectName(u"RegisterButtom")
 
         self.Botones.addWidget(self.RegisterButtom)

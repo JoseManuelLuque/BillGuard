@@ -73,14 +73,11 @@ class Ui_Login(object):
 "    background-color:"
                         " #5C8E3E;\n"
 "}")
-        self.verticalLayoutWidget = QWidget(Login)
-        self.verticalLayoutWidget.setObjectName(u"verticalLayoutWidget")
-        self.verticalLayoutWidget.setGeometry(QRect(0, 0, 401, 502))
-        self.ColumnaPrincipal = QVBoxLayout(self.verticalLayoutWidget)
+        self.ColumnaPrincipal = QVBoxLayout(Login)
         self.ColumnaPrincipal.setSpacing(16)
         self.ColumnaPrincipal.setObjectName(u"ColumnaPrincipal")
         self.ColumnaPrincipal.setContentsMargins(16, 16, 16, 16)
-        self.Loginlabel = QLabel(self.verticalLayoutWidget)
+        self.Loginlabel = QLabel(Login)
         self.Loginlabel.setObjectName(u"Loginlabel")
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
@@ -96,19 +93,19 @@ class Ui_Login(object):
 
         self.Campos = QVBoxLayout()
         self.Campos.setObjectName(u"Campos")
-        self.UsuarioLabell = QLabel(self.verticalLayoutWidget)
+        self.UsuarioLabell = QLabel(Login)
         self.UsuarioLabell.setObjectName(u"UsuarioLabell")
         sizePolicy.setHeightForWidth(self.UsuarioLabell.sizePolicy().hasHeightForWidth())
         self.UsuarioLabell.setSizePolicy(sizePolicy)
 
         self.Campos.addWidget(self.UsuarioLabell)
 
-        self.EmailEdit = QLineEdit(self.verticalLayoutWidget)
+        self.EmailEdit = QLineEdit(Login)
         self.EmailEdit.setObjectName(u"EmailEdit")
 
         self.Campos.addWidget(self.EmailEdit)
 
-        self.ContrasnaLabel = QLabel(self.verticalLayoutWidget)
+        self.ContrasnaLabel = QLabel(Login)
         self.ContrasnaLabel.setObjectName(u"ContrasnaLabel")
         sizePolicy.setHeightForWidth(self.ContrasnaLabel.sizePolicy().hasHeightForWidth())
         self.ContrasnaLabel.setSizePolicy(sizePolicy)
@@ -116,7 +113,7 @@ class Ui_Login(object):
 
         self.Campos.addWidget(self.ContrasnaLabel)
 
-        self.PasswordEdit = QLineEdit(self.verticalLayoutWidget)
+        self.PasswordEdit = QLineEdit(Login)
         self.PasswordEdit.setObjectName(u"PasswordEdit")
 
         self.Campos.addWidget(self.PasswordEdit)
@@ -126,12 +123,12 @@ class Ui_Login(object):
 
         self.Botones = QHBoxLayout()
         self.Botones.setObjectName(u"Botones")
-        self.LoginButon = QPushButton(self.verticalLayoutWidget)
+        self.LoginButon = QPushButton(Login)
         self.LoginButon.setObjectName(u"LoginButon")
 
         self.Botones.addWidget(self.LoginButon)
 
-        self.RegisterButtom = QPushButton(self.verticalLayoutWidget)
+        self.RegisterButtom = QPushButton(Login)
         self.RegisterButtom.setObjectName(u"RegisterButtom")
 
         self.Botones.addWidget(self.RegisterButtom)
