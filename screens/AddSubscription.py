@@ -25,6 +25,17 @@ class AddSubscription(QDialog):
         # Conectar el botón de guardar a la función save_subscription
         self.btnSave.clicked.connect(self.save_subscription)
         
+        # Conectar los campos de entrada a la función de verificación
+        self.inputNombreServicio.textChanged.connect(self.check_required_fields)
+        self.inputCostoMensual.textChanged.connect(self.check_required_fields)
+        self.inputFechaInicio.dateChanged.connect(self.check_required_fields)
+        self.inputFechaRenovacion.dateChanged.connect(self.check_required_fields)
+        self.comboEstado.currentIndexChanged.connect(self.check_required_fields)
+        self.comboMetodoPago.currentIndexChanged.connect(self.check_required_fields)
+        
+        # Deshabilitar el botón de guardar por defecto
+        self.btnSave.setEnabled(False)
+        
     def set_default_dates(self):
         # Obtener la fecha actual
         current_date = QDate.currentDate()
@@ -87,6 +98,17 @@ class AddSubscription(QDialog):
                 self.comboMetodoPago.setCurrentIndex(index)
         
         conn.close()
+        
+    def check_required_fields(self):
+        if (self.inputNombreServicio.text() and
+            self.inputCostoMensual.text() and
+            self.inputFechaInicio.date().isValid() and
+            self.inputFechaRenovacion.date().isValid() and
+            self.comboEstado.currentText() and
+            self.comboMetodoPago.currentText()):
+            self.btnSave.setEnabled(True)
+        else:
+            self.btnSave.setEnabled(False)
         
     def save_subscription(self):
         nombre_servicio = self.inputNombreServicio.text()

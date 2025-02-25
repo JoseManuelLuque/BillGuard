@@ -24,6 +24,44 @@ class Ui_AddPaymentMethod(object):
         if not AddPaymentMethod.objectName():
             AddPaymentMethod.setObjectName(u"AddPaymentMethod")
         AddPaymentMethod.resize(400, 300)
+        AddPaymentMethod.setStyleSheet(u"QWidget {\n"
+"    background-color: #f0f0f0;\n"
+"    font-family: Arial, sans-serif;\n"
+"    font-size: 14px;\n"
+"}\n"
+"\n"
+"QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    color: white;\n"
+"    border: none;\n"
+"    padding: 10px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    font-size: 14px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 8px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049;\n"
+"}\n"
+"\n"
+"QLabel {\n"
+"    color: #333;\n"
+"    font-size: 14px;\n"
+"}\n"
+"\n"
+"QLineEdit, QDateEdit, QComboBox {\n"
+"    padding: 5px;\n"
+"    border: 1px solid #ccc;\n"
+"    border-radius: 4px;\n"
+"}\n"
+"\n"
+"QListWidget {\n"
+"    border: 1px solid #ccc;\n"
+"    border-radius: 4px;\n"
+"    padding: 5px;\n"
+"}")
         self.verticalLayout = QVBoxLayout(AddPaymentMethod)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.horizontalLayoutNombre = QHBoxLayout()
@@ -104,14 +142,14 @@ class Ui_AddPaymentMethod(object):
     def retranslateUi(self, AddPaymentMethod):
         AddPaymentMethod.setWindowTitle(QCoreApplication.translate("AddPaymentMethod", u"Agregar M\u00e9todo de Pago", None))
         self.labelNombre.setText(QCoreApplication.translate("AddPaymentMethod", u"Nombre:", None))
-        self.inputNombre.setPlaceholderText(QCoreApplication.translate("AddPaymentMethod", u"Nombre", None))
+        self.inputNombre.setPlaceholderText(QCoreApplication.translate("AddPaymentMethod", u"Nombre del M\u00e9todo de Pago", None))
         self.labelTipo.setText(QCoreApplication.translate("AddPaymentMethod", u"Tipo:", None))
-        self.comboTipo.setItemText(0, QCoreApplication.translate("AddPaymentMethod", u"Cuenta bancaria", None))
-        self.comboTipo.setItemText(1, QCoreApplication.translate("AddPaymentMethod", u"Tarjeta de cr\u00e9dito", None))
-        self.comboTipo.setItemText(2, QCoreApplication.translate("AddPaymentMethod", u"Tarjeta de d\u00e9bito", None))
+        self.comboTipo.setItemText(0, QCoreApplication.translate("AddPaymentMethod", u"Cuenta Bancaria", None))
+        self.comboTipo.setItemText(1, QCoreApplication.translate("AddPaymentMethod", u"Tarjeta de D\u00e9bito", None))
+        self.comboTipo.setItemText(2, QCoreApplication.translate("AddPaymentMethod", u"Tarjeta de Cr\u00e9dito", None))
 
         self.labelNumero.setText(QCoreApplication.translate("AddPaymentMethod", u"N\u00famero:", None))
-        self.inputNumero.setPlaceholderText(QCoreApplication.translate("AddPaymentMethod", u"N\u00famero", None))
+        self.inputNumero.setPlaceholderText(QCoreApplication.translate("AddPaymentMethod", u"N\u00famero del M\u00e9todo de Pago", None))
         self.labelFechaVencimiento.setText(QCoreApplication.translate("AddPaymentMethod", u"Fecha de Vencimiento:", None))
         self.inputFechaVencimiento.setDisplayFormat(QCoreApplication.translate("AddPaymentMethod", u"dd/MM/yyyy", None))
         self.btnSave.setText(QCoreApplication.translate("AddPaymentMethod", u"Guardar", None))

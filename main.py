@@ -1,5 +1,6 @@
 import sys
 from PyQt6.QtWidgets import QApplication, QMainWindow, QStackedWidget
+from PyQt6.QtGui import QIcon
 import pyrebase
 from firebase_config import firebase_config
 from screens.Login import LoginApp
@@ -32,9 +33,22 @@ class MainApp(QMainWindow):
         
         # Mostrar la ventana de inicio de sesión
         self.stack.setCurrentWidget(self.login_window)
+        
+        # Cambiar el nombre de la ventana principal
+        self.setWindowTitle("BillGuard")
+        
+        # Cambiar el icono de la ventana principal
+        self.setWindowIcon(QIcon("assets/icono.png"))
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
+    
+    # Cambiar el nombre de la aplicación
+    app.setApplicationName("BillGuard")
+    
+    # Cambiar el icono de la aplicación
+    app.setWindowIcon(QIcon("assets/icono.png"))
+    
     main_app = MainApp()
     main_app.show()
     sys.exit(app.exec())

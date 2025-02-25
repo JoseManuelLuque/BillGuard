@@ -13,6 +13,46 @@
   <property name="windowTitle">
    <string>Agregar Método de Pago</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+QPushButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 4px 2px;
+    border-radius: 8px;
+}
+
+QPushButton:hover {
+    background-color: #45a049;
+}
+
+QLabel {
+    color: #333;
+    font-size: 14px;
+}
+
+QLineEdit, QDateEdit, QComboBox {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+QListWidget {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+}</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <layout class="QHBoxLayout" name="horizontalLayoutNombre">
@@ -26,7 +66,7 @@
      <item>
       <widget class="QLineEdit" name="inputNombre">
        <property name="placeholderText">
-        <string>Nombre</string>
+        <string>Nombre del Método de Pago</string>
        </property>
       </widget>
      </item>
@@ -45,17 +85,17 @@
       <widget class="QComboBox" name="comboTipo">
        <item>
         <property name="text">
-         <string>Cuenta bancaria</string>
+         <string>Cuenta Bancaria</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Tarjeta de crédito</string>
+         <string>Tarjeta de Débito</string>
         </property>
        </item>
        <item>
         <property name="text">
-         <string>Tarjeta de débito</string>
+         <string>Tarjeta de Crédito</string>
         </property>
        </item>
       </widget>
@@ -74,7 +114,7 @@
      <item>
       <widget class="QLineEdit" name="inputNumero">
        <property name="placeholderText">
-        <string>Número</string>
+        <string>Número del Método de Pago</string>
        </property>
       </widget>
      </item>
@@ -91,11 +131,11 @@
      </item>
      <item>
       <widget class="QDateEdit" name="inputFechaVencimiento">
-       <property name="calendarPopup">
-        <bool>true</bool>
-       </property>
        <property name="displayFormat">
         <string>dd/MM/yyyy</string>
+       </property>
+       <property name="calendarPopup">
+        <bool>true</bool>
        </property>
       </widget>
      </item>
