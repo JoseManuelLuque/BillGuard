@@ -26,70 +26,82 @@ class Ui_Register(object):
         Register.resize(400, 471)
         Register.setMinimumSize(QSize(400, 471))
         Register.setStyleSheet(u"/* Estilo general del fondo */\n"
-"QWidget#Register {\n"
-"    background-color: #F5F5F5;\n"
-"}\n"
-"\n"
-"/* Estilo del t\u00edtulo \"Registrarse\" */\n"
-"QLabel#Loginlabel {\n"
-"    background-color: #85BB65;\n"
-"    color: white;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border-radius: 8px;\n"
-"    padding: 8px;\n"
-"}\n"
-"\n"
-"/* Estilo de los labels */\n"
-"QLabel {\n"
+"QWidget {\n"
+"    background-color: #F5F5F5; /* Fondo claro */\n"
+"    color: #333333; /* Texto en gris oscuro */\n"
+"    font-family: Arial, sans-serif;\n"
 "    font-size: 14px;\n"
-"    color: #333333;\n"
-"}\n"
-"\n"
-"/* Estilo de los campos de entrada */\n"
-"QLineEdit {\n"
-"    border: 2px solid #85BB65;\n"
-"    border-radius: 5px;\n"
-"    padding: 5px;\n"
-"    font-size: 14px;\n"
-"}\n"
-"QLineEdit:focus {\n"
-"    border: 2px solid #6FA24C;\n"
 "}\n"
 "\n"
 "/* Estilo de los botones */\n"
 "QPushButton {\n"
-"    background-color: #85BB65;\n"
-"    color: white;\n"
-"    font-size: 16px;\n"
-"    font-weight: bold;\n"
-"    border-radius: 5px;\n"
-"    padding: 8px;\n"
+"    background-color: #4CAF50; /* Verde oscuro */\n"
+"    color: #FFFFFF; /* Texto en blanco */\n"
+"    border: none;\n"
+"    padding: 10px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    font-size: 14px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 8px;\n"
 "}\n"
+"\n"
 "QPushButton:hover {\n"
-"    background-color: #6FA24C;\n"
+"    background-color: #45a049; /* Verde m\u00e1s claro al pasar el rat\u00f3n */\n"
 "}\n"
+"\n"
 "QPushButton:pressed {\n"
-"    background-color: #5C8"
-                        "E3E;\n"
+"    background-color: #388E3C; /* Verde m\u00e1s oscuro al presionar */\n"
+"}\n"
+"\n"
+"/* Estilo de los labels */\n"
+"QLabel {\n"
+"    color: #333333; /* Texto en gris oscuro */\n"
+"    font-size: 14px;\n"
+"}\n"
+"\n"
+"/* Estilo del t\u00edtulo de las ventanas */\n"
+"QLabel#LoginTitle, QLabel#RegisterT"
+                        "itle {\n"
+"    background-color: #4CAF50; /* Verde oscuro */\n"
+"    color: #FFFFFF; /* Texto en blanco */\n"
+"    font-size: 24px;\n"
+"    font-weight: bold;\n"
+"    border-radius: 8px;\n"
+"    padding: 10px;\n"
+"    text-align: center;\n"
+"}\n"
+"\n"
+"/* Estilo de los campos de entrada */\n"
+"QLineEdit, QDateEdit, QComboBox {\n"
+"    padding: 10px;\n"
+"    border: 1px solid #4CAF50; /* Borde verde oscuro */\n"
+"    border-radius: 4px;\n"
+"    background-color: #FFFFFF; /* Fondo blanco */\n"
+"    color: #333333; /* Texto en gris oscuro */\n"
+"    font-size: 14px;\n"
+"}\n"
+"\n"
+"QLineEdit:focus, QDateEdit:focus, QComboBox:focus {\n"
+"    border: 1px solid #45a049; /* Borde verde m\u00e1s claro al enfocar */\n"
 "}")
         self.ColumnaPrincipal = QVBoxLayout(Register)
         self.ColumnaPrincipal.setSpacing(16)
         self.ColumnaPrincipal.setObjectName(u"ColumnaPrincipal")
         self.ColumnaPrincipal.setContentsMargins(16, 16, 16, 16)
-        self.Loginlabel = QLabel(Register)
-        self.Loginlabel.setObjectName(u"Loginlabel")
+        self.RegisterTitle = QLabel(Register)
+        self.RegisterTitle.setObjectName(u"RegisterTitle")
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.Loginlabel.sizePolicy().hasHeightForWidth())
-        self.Loginlabel.setSizePolicy(sizePolicy)
-        self.Loginlabel.setFrameShape(QFrame.Shape.Box)
-        self.Loginlabel.setFrameShadow(QFrame.Shadow.Plain)
-        self.Loginlabel.setLineWidth(2)
-        self.Loginlabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        sizePolicy.setHeightForWidth(self.RegisterTitle.sizePolicy().hasHeightForWidth())
+        self.RegisterTitle.setSizePolicy(sizePolicy)
+        self.RegisterTitle.setFrameShape(QFrame.Shape.Box)
+        self.RegisterTitle.setFrameShadow(QFrame.Shadow.Plain)
+        self.RegisterTitle.setLineWidth(2)
+        self.RegisterTitle.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.ColumnaPrincipal.addWidget(self.Loginlabel)
+        self.ColumnaPrincipal.addWidget(self.RegisterTitle)
 
         self.Campos = QVBoxLayout()
         self.Campos.setObjectName(u"Campos")
@@ -169,7 +181,7 @@ class Ui_Register(object):
 
     def retranslateUi(self, Register):
         Register.setWindowTitle(QCoreApplication.translate("Register", u"Form", None))
-        self.Loginlabel.setText(QCoreApplication.translate("Register", u"Registrarse", None))
+        self.RegisterTitle.setText(QCoreApplication.translate("Register", u"Registrarse", None))
         self.UsuarioLabell.setText(QCoreApplication.translate("Register", u"Usuario", None))
         self.EmailLabel.setText(QCoreApplication.translate("Register", u"Email", None))
         self.ContrasnaLabel.setText(QCoreApplication.translate("Register", u"Conrase\u00f1a", None))

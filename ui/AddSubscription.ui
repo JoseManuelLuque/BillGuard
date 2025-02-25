@@ -14,15 +14,18 @@
    <string>Agregar Suscripción</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget {
-    background-color: #f0f0f0;
+   <string notr="true">/* Estilo general del fondo */
+QWidget {
+    background-color: #F5F5F5; /* Fondo claro */
+    color: #333333; /* Texto en gris oscuro */
     font-family: Arial, sans-serif;
     font-size: 14px;
 }
 
+/* Estilo de los botones */
 QPushButton {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #4CAF50; /* Verde oscuro */
+    color: #FFFFFF; /* Texto en blanco */
     border: none;
     padding: 10px 20px;
     text-align: center;
@@ -33,24 +36,52 @@ QPushButton {
 }
 
 QPushButton:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Verde más claro al pasar el ratón */
 }
 
+QPushButton:pressed {
+    background-color: #388E3C; /* Verde más oscuro al presionar */
+}
+
+/* Estilo de los labels */
 QLabel {
-    color: #333;
+    color: #333333; /* Texto en gris oscuro */
     font-size: 14px;
 }
 
+/* Estilo de los campos de entrada */
 QLineEdit, QDateEdit, QComboBox {
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #4CAF50; /* Borde verde oscuro */
     border-radius: 4px;
+    background-color: #FFFFFF; /* Fondo blanco */
+    color: #333333; /* Texto en gris oscuro */
 }
 
-QListWidget {
-    border: 1px solid #ccc;
+QLineEdit:focus, QDateEdit:focus, QComboBox:focus {
+    border: 1px solid #45a049; /* Borde verde más claro al enfocar */
+}
+
+/* Estilo de las tablas */
+QTableWidget, QListWidget {
+    border: 1px solid #4CAF50; /* Borde verde oscuro */
     border-radius: 4px;
+    background-color: #FFFFFF; /* Fondo blanco */
+    color: #333333; /* Texto en gris oscuro */
     padding: 5px;
+}
+
+QHeaderView::section {
+    background-color: #4CAF50; /* Fondo verde oscuro */
+    color: #FFFFFF; /* Texto en blanco */
+    padding: 4px;
+    border: 1px solid #3E3E3E; /* Borde oscuro */
+}
+
+/* Estilo de los elementos seleccionados en las tablas */
+QTableWidget::item:selected, QListWidget::item:selected {
+    background-color: #45a049; /* Fondo verde más claro */
+    color: #FFFFFF; /* Texto en blanco */
 }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">

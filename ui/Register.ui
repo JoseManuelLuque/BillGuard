@@ -21,51 +21,63 @@
   </property>
   <property name="styleSheet">
    <string notr="true">/* Estilo general del fondo */
-QWidget#Register {
-    background-color: #F5F5F5;
-}
-
-/* Estilo del título "Registrarse" */
-QLabel#Loginlabel {
-    background-color: #85BB65;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 8px;
-    padding: 8px;
-}
-
-/* Estilo de los labels */
-QLabel {
+QWidget {
+    background-color: #F5F5F5; /* Fondo claro */
+    color: #333333; /* Texto en gris oscuro */
+    font-family: Arial, sans-serif;
     font-size: 14px;
-    color: #333333;
-}
-
-/* Estilo de los campos de entrada */
-QLineEdit {
-    border: 2px solid #85BB65;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 14px;
-}
-QLineEdit:focus {
-    border: 2px solid #6FA24C;
 }
 
 /* Estilo de los botones */
 QPushButton {
-    background-color: #85BB65;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 8px;
+    background-color: #4CAF50; /* Verde oscuro */
+    color: #FFFFFF; /* Texto en blanco */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 4px 2px;
+    border-radius: 8px;
 }
+
 QPushButton:hover {
-    background-color: #6FA24C;
+    background-color: #45a049; /* Verde más claro al pasar el ratón */
 }
+
 QPushButton:pressed {
-    background-color: #5C8E3E;
+    background-color: #388E3C; /* Verde más oscuro al presionar */
+}
+
+/* Estilo de los labels */
+QLabel {
+    color: #333333; /* Texto en gris oscuro */
+    font-size: 14px;
+}
+
+/* Estilo del título de las ventanas */
+QLabel#LoginTitle, QLabel#RegisterTitle {
+    background-color: #4CAF50; /* Verde oscuro */
+    color: #FFFFFF; /* Texto en blanco */
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilo de los campos de entrada */
+QLineEdit, QDateEdit, QComboBox {
+    padding: 10px;
+    border: 1px solid #4CAF50; /* Borde verde oscuro */
+    border-radius: 4px;
+    background-color: #FFFFFF; /* Fondo blanco */
+    color: #333333; /* Texto en gris oscuro */
+    font-size: 14px;
+}
+
+QLineEdit:focus, QDateEdit:focus, QComboBox:focus {
+    border: 1px solid #45a049; /* Borde verde más claro al enfocar */
 }</string>
   </property>
   <layout class="QVBoxLayout" name="ColumnaPrincipal">
@@ -85,7 +97,7 @@ QPushButton:pressed {
     <number>16</number>
    </property>
    <item>
-    <widget class="QLabel" name="Loginlabel">
+    <widget class="QLabel" name="RegisterTitle">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
        <horstretch>0</horstretch>

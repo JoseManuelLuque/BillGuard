@@ -26,70 +26,82 @@ class Ui_Login(object):
         Login.resize(400, 471)
         Login.setMinimumSize(QSize(400, 471))
         Login.setStyleSheet(u"/* Estilo general del fondo */\n"
-"QWidget#Login {\n"
-"    background-color: #F5F5F5;\n"
-"}\n"
-"\n"
-"/* Estilo del t\u00edtulo \"Iniciar Sesi\u00f3n\" */\n"
-"QLabel#Loginlabel {\n"
-"    background-color: #85BB65;\n"
-"    color: white;\n"
-"    font-size: 20px;\n"
-"    font-weight: bold;\n"
-"    border-radius: 8px;\n"
-"    padding: 8px;\n"
-"}\n"
-"\n"
-"/* Estilo de los labels */\n"
-"QLabel {\n"
+"QWidget {\n"
+"    background-color: #F5F5F5; /* Fondo claro */\n"
+"    color: #333333; /* Texto en gris oscuro */\n"
+"    font-family: Arial, sans-serif;\n"
 "    font-size: 14px;\n"
-"    color: #333333;\n"
-"}\n"
-"\n"
-"/* Estilo de los campos de entrada */\n"
-"QLineEdit {\n"
-"    border: 2px solid #85BB65;\n"
-"    border-radius: 5px;\n"
-"    padding: 5px;\n"
-"    font-size: 14px;\n"
-"}\n"
-"QLineEdit:focus {\n"
-"    border: 2px solid #6FA24C;\n"
 "}\n"
 "\n"
 "/* Estilo de los botones */\n"
 "QPushButton {\n"
-"    background-color: #85BB65;\n"
-"    color: white;\n"
-"    font-size: 16px;\n"
-"    font-weight: bold;\n"
-"    border-radius: 5px;\n"
-"    padding: 8px;\n"
+"    background-color: #4CAF50; /* Verde oscuro */\n"
+"    color: #FFFFFF; /* Texto en blanco */\n"
+"    border: none;\n"
+"    padding: 10px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    font-size: 14px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 8px;\n"
 "}\n"
+"\n"
 "QPushButton:hover {\n"
-"    background-color: #6FA24C;\n"
+"    background-color: #45a049; /* Verde m\u00e1s claro al pasar el rat\u00f3n */\n"
 "}\n"
+"\n"
 "QPushButton:pressed {\n"
-"    background-color:"
-                        " #5C8E3E;\n"
+"    background-color: #388E3C; /* Verde m\u00e1s oscuro al presionar */\n"
+"}\n"
+"\n"
+"/* Estilo de los labels */\n"
+"QLabel {\n"
+"    color: #333333; /* Texto en gris oscuro */\n"
+"    font-size: 14px;\n"
+"}\n"
+"\n"
+"/* Estilo del t\u00edtulo de las ventanas */\n"
+"QLabel#LoginTitle, QLabel#RegisterT"
+                        "itle {\n"
+"    background-color: #4CAF50; /* Verde oscuro */\n"
+"    color: #FFFFFF; /* Texto en blanco */\n"
+"    font-size: 24px;\n"
+"    font-weight: bold;\n"
+"    border-radius: 8px;\n"
+"    padding: 10px;\n"
+"    text-align: center;\n"
+"}\n"
+"\n"
+"/* Estilo de los campos de entrada */\n"
+"QLineEdit, QDateEdit, QComboBox {\n"
+"    padding: 10px;\n"
+"    border: 1px solid #4CAF50; /* Borde verde oscuro */\n"
+"    border-radius: 4px;\n"
+"    background-color: #FFFFFF; /* Fondo blanco */\n"
+"    color: #333333; /* Texto en gris oscuro */\n"
+"    font-size: 14px;\n"
+"}\n"
+"\n"
+"QLineEdit:focus, QDateEdit:focus, QComboBox:focus {\n"
+"    border: 1px solid #45a049; /* Borde verde m\u00e1s claro al enfocar */\n"
 "}")
         self.ColumnaPrincipal = QVBoxLayout(Login)
         self.ColumnaPrincipal.setSpacing(16)
         self.ColumnaPrincipal.setObjectName(u"ColumnaPrincipal")
         self.ColumnaPrincipal.setContentsMargins(16, 16, 16, 16)
-        self.Loginlabel = QLabel(Login)
-        self.Loginlabel.setObjectName(u"Loginlabel")
+        self.LoginTitle = QLabel(Login)
+        self.LoginTitle.setObjectName(u"LoginTitle")
         sizePolicy = QSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.Loginlabel.sizePolicy().hasHeightForWidth())
-        self.Loginlabel.setSizePolicy(sizePolicy)
-        self.Loginlabel.setFrameShape(QFrame.Shape.Box)
-        self.Loginlabel.setFrameShadow(QFrame.Shadow.Plain)
-        self.Loginlabel.setLineWidth(2)
-        self.Loginlabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        sizePolicy.setHeightForWidth(self.LoginTitle.sizePolicy().hasHeightForWidth())
+        self.LoginTitle.setSizePolicy(sizePolicy)
+        self.LoginTitle.setFrameShape(QFrame.Shape.Box)
+        self.LoginTitle.setFrameShadow(QFrame.Shadow.Plain)
+        self.LoginTitle.setLineWidth(2)
+        self.LoginTitle.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.ColumnaPrincipal.addWidget(self.Loginlabel)
+        self.ColumnaPrincipal.addWidget(self.LoginTitle)
 
         self.Campos = QVBoxLayout()
         self.Campos.setObjectName(u"Campos")
@@ -144,7 +156,7 @@ class Ui_Login(object):
 
     def retranslateUi(self, Login):
         Login.setWindowTitle(QCoreApplication.translate("Login", u"Form", None))
-        self.Loginlabel.setText(QCoreApplication.translate("Login", u"Iniciar Sesi\u00f3n", None))
+        self.LoginTitle.setText(QCoreApplication.translate("Login", u"Iniciar Sesi\u00f3n", None))
         self.UsuarioLabell.setText(QCoreApplication.translate("Login", u"Email", None))
         self.ContrasnaLabel.setText(QCoreApplication.translate("Login", u"Conrase\u00f1a", None))
         self.LoginButon.setText(QCoreApplication.translate("Login", u"Iniciar Sesi\u00f3n", None))

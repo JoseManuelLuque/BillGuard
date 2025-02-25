@@ -21,51 +21,73 @@
   </property>
   <property name="styleSheet">
    <string notr="true">/* Estilo general del fondo */
-QWidget#Login {
-    background-color: #F5F5F5;
-}
-
-/* Estilo del título &quot;Iniciar Sesión&quot; */
-QLabel#Loginlabel {
-    background-color: #85BB65;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 8px;
-    padding: 8px;
-}
-
-/* Estilo de los labels */
-QLabel {
+QWidget {
+    background-color: #F5F5F5; /* Fondo claro */
+    color: #333333; /* Texto en gris oscuro */
+    font-family: Arial, sans-serif;
     font-size: 14px;
-    color: #333333;
-}
-
-/* Estilo de los campos de entrada */
-QLineEdit {
-    border: 2px solid #85BB65;
-    border-radius: 5px;
-    padding: 5px;
-    font-size: 14px;
-}
-QLineEdit:focus {
-    border: 2px solid #6FA24C;
 }
 
 /* Estilo de los botones */
 QPushButton {
-    background-color: #85BB65;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 8px;
+    background-color: #4CAF50; /* Verde oscuro */
+    color: #FFFFFF; /* Texto en blanco */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 4px 2px;
+    border-radius: 8px;
 }
+
 QPushButton:hover {
-    background-color: #6FA24C;
+    background-color: #45a049; /* Verde más claro al pasar el ratón */
 }
+
 QPushButton:pressed {
-    background-color: #5C8E3E;
+    background-color: #388E3C; /* Verde más oscuro al presionar */
+}
+
+/* Estilo de los labels */
+QLabel {
+    color: #333333; /* Texto en gris oscuro */
+    font-size: 14px;
+}
+
+/* Estilo de los campos de entrada */
+QLineEdit, QDateEdit, QComboBox {
+    padding: 5px;
+    border: 1px solid #4CAF50; /* Borde verde oscuro */
+    border-radius: 4px;
+    background-color: #FFFFFF; /* Fondo blanco */
+    color: #333333; /* Texto en gris oscuro */
+}
+
+QLineEdit:focus, QDateEdit:focus, QComboBox:focus {
+    border: 1px solid #45a049; /* Borde verde más claro al enfocar */
+}
+
+/* Estilo de las tablas */
+QTableWidget, QListWidget {
+    border: 1px solid #4CAF50; /* Borde verde oscuro */
+    border-radius: 4px;
+    background-color: #FFFFFF; /* Fondo blanco */
+    color: #333333; /* Texto en gris oscuro */
+    padding: 5px;
+}
+
+QHeaderView::section {
+    background-color: #4CAF50; /* Fondo verde oscuro */
+    color: #FFFFFF; /* Texto en blanco */
+    padding: 4px;
+    border: 1px solid #3E3E3E; /* Borde oscuro */
+}
+
+/* Estilo de los elementos seleccionados en las tablas */
+QTableWidget::item:selected, QListWidget::item:selected {
+    background-color: #45a049; /* Fondo verde más claro */
+    color: #FFFFFF; /* Texto en blanco */
 }</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
