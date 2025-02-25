@@ -36,10 +36,6 @@ class MainWindow(QWidget):
         self.listSuscripciones.itemSelectionChanged.connect(self.enable_subscription_buttons)
         self.listMetodosPago.itemSelectionChanged.connect(self.enable_payment_method_buttons)
         
-        # Cargar las suscripciones y métodos de pago del usuario
-        self.load_suscripciones()
-        self.load_payment_methods()
-        
     def load_suscripciones(self):
         user_email = self.main_app.auth.current_user['email']
         conn = sqlite3.connect('billguard.db')
@@ -55,7 +51,12 @@ class MainWindow(QWidget):
         user_id = result[0]
         
         # Obtener las suscripciones del usuario
-        cursor.execute("SELECT id, nombre_servicio, costo_mensual, fecha_renovacion FROM suscripciones WHERE usuario_id=?", (user_id,))
+        cursor.execute("""
+            SELECT s.id, s.nombre_servicio, s.costo_mensual, s.fecha_renovacion, m.nombre, m.numero
+            FROM suscripciones s
+            JOIN metodos_pago m ON s.metodo_pago_id = m.id
+            WHERE s.usuario_id=?
+        """, (user_id,))
         suscripciones = cursor.fetchall()
         
         # Limpiar la lista de suscripciones
@@ -63,8 +64,8 @@ class MainWindow(QWidget):
         
         # Agregar las suscripciones a la lista
         for suscripcion in suscripciones:
-            suscripcion_id, nombre_servicio, costo_mensual, fecha_renovacion = suscripcion
-            self.listSuscripciones.addItem(f"{suscripcion_id} - {nombre_servicio} - {costo_mensual}€ - Renovación: {fecha_renovacion}")
+            suscripcion_id, nombre_servicio, costo_mensual, fecha_renovacion, nombre_metodo_pago, numero_metodo_pago = suscripcion
+            self.listSuscripciones.addItem(f"{suscripcion_id} - {nombre_servicio} - {costo_mensual}€ - Renovación: {fecha_renovacion} - {nombre_metodo_pago} - {numero_metodo_pago[-4:]}")
         
         conn.close()
         

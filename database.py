@@ -41,7 +41,9 @@ def initialize_database():
         fecha_inicio DATE NOT NULL,
         fecha_renovacion DATE NOT NULL,
         estado TEXT NOT NULL,
-        FOREIGN KEY (usuario_id) REFERENCES usuarios (id)
+        metodo_pago_id INTEGER NOT NULL,
+        FOREIGN KEY (usuario_id) REFERENCES usuarios (id),
+        FOREIGN KEY (metodo_pago_id) REFERENCES metodos_pago (id)
     );
     """
 
@@ -49,8 +51,9 @@ def initialize_database():
     CREATE TABLE IF NOT EXISTS metodos_pago (
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         usuario_id INTEGER NOT NULL,
+        nombre TEXT NOT NULL,
         tipo TEXT NOT NULL,
-        ultimos_4_digitos TEXT NOT NULL,
+        numero TEXT NOT NULL,
         fecha_vencimiento DATE NOT NULL,
         FOREIGN KEY (usuario_id) REFERENCES usuarios (id)
     );

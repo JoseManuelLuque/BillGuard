@@ -23,6 +23,7 @@ class LoginApp(QWidget):
             QMessageBox.information(self, "Éxito", "Inicio de sesión exitoso")
             print(f"Email: {email}")
             self.main_app.main_window.load_suscripciones()
+            self.main_app.main_window.load_payment_methods()
             self.main_app.stack.setCurrentWidget(self.main_app.main_window)
         except Exception as e:
             if len(e.args) > 1:

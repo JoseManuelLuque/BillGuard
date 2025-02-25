@@ -106,6 +106,21 @@ class Ui_AddSubscription(object):
 
         self.verticalLayout.addLayout(self.horizontalLayoutEstado)
 
+        self.horizontalLayoutMetodoPago = QHBoxLayout()
+        self.horizontalLayoutMetodoPago.setObjectName(u"horizontalLayoutMetodoPago")
+        self.labelMetodoPago = QLabel(AddSubscription)
+        self.labelMetodoPago.setObjectName(u"labelMetodoPago")
+
+        self.horizontalLayoutMetodoPago.addWidget(self.labelMetodoPago)
+
+        self.comboMetodoPago = QComboBox(AddSubscription)
+        self.comboMetodoPago.setObjectName(u"comboMetodoPago")
+
+        self.horizontalLayoutMetodoPago.addWidget(self.comboMetodoPago)
+
+
+        self.verticalLayout.addLayout(self.horizontalLayoutMetodoPago)
+
         self.btnSave = QPushButton(AddSubscription)
         self.btnSave.setObjectName(u"btnSave")
 
@@ -132,6 +147,7 @@ class Ui_AddSubscription(object):
         self.comboEstado.setItemText(1, QCoreApplication.translate("AddSubscription", u"Pausado", None))
         self.comboEstado.setItemText(2, QCoreApplication.translate("AddSubscription", u"Cancelado", None))
 
+        self.labelMetodoPago.setText(QCoreApplication.translate("AddSubscription", u"M\u00e9todo de Pago:", None))
         self.btnSave.setText(QCoreApplication.translate("AddSubscription", u"Guardar", None))
     # retranslateUi
 

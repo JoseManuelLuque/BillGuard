@@ -123,6 +123,20 @@
     </layout>
    </item>
    <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutMetodoPago">
+     <item>
+      <widget class="QLabel" name="labelMetodoPago">
+       <property name="text">
+        <string>Método de Pago:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboMetodoPago"/>
+     </item>
+    </layout>
+   </item>
+   <item>
     <widget class="QPushButton" name="btnSave">
      <property name="text">
       <string>Guardar</string>
