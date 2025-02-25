@@ -10,7 +10,7 @@ Bienvenido a **BillGuard**, una aplicación para gestionar tus suscripciones (Ne
 
 ### 🌟 Introducción
 
-**BillGuard** es una aplicación desarrollada en Python utilizando PyQt6 para la interfaz gráfica y SQLite para la base de datos. La aplicación permite a los usuarios gestionar sus suscripciones y métodos de pago de manera eficiente.
+**BillGuard** es una aplicación desarrollada en Python utilizando PyQt6 para la interfaz gráfica y SQLite para la base de datos, a parte de Firebase para la autentificación de usuarios. La aplicación permite a los usuarios gestionar sus suscripciones de manera eficiente.
 
 
 
