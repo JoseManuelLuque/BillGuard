@@ -18,39 +18,69 @@ Bienvenido a **BillGuard**, una aplicación para gestionar tus suscripciones (Ne
 
 A continuación se muestra el diagrama E-R de la base de datos utilizada en **BillGuard**:
 
-![Diagrama E-R](https://vscode-file/vscode-app/c:/Users/josem/Escritorio/DIN/PyQt6/BillGuard/path/to/your/er-diagram.png)
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### 📋 Descripción de Tablas
 
-#### Tabla `usuarios`
+#### Usuarios
 
-| Columna           | Tipo    | Descripción                       |
-| ----------------- | ------- | --------------------------------- |
-| `id`              | INTEGER | Identificador único del usuario   |
-| `nombre`          | TEXT    | Nombre del usuario                |
-| `email`           | TEXT    | Email del usuario                 |
-| `contraseña_hash` | TEXT    | Hash de la contraseña del usuario |
+| Campo            | Tipo     | Clave | Descripción              |
+| ---------------- | -------- | ----- | ------------------------ |
+| id               | INTEGER  | PK    | Identificador de usuario |
+| nombre           | TEXT     |       | Nombre del usuario       |
+| email            | TEXT     | ÚNICO | Correo electrónico       |
+| contraseña\_hash | TEXT     |       | Contraseña cifrada       |
+| fecha\_registro  | DATETIME |       | Fecha de registro        |
 
-#### Tabla `suscripciones`
+***
 
-| Columna            | Tipo    | Descripción                                           |
-| ------------------ | ------- | ----------------------------------------------------- |
-| `id`               | INTEGER | Identificador único de la suscripción                 |
-| `usuario_id`       | INTEGER | Identificador del usuario                             |
-| `nombre_servicio`  | TEXT    | Nombre del servicio                                   |
-| `costo_mensual`    | REAL    | Costo mensual de la suscripción                       |
-| `fecha_inicio`     | TEXT    | Fecha de inicio de la suscripción                     |
-| `fecha_renovacion` | TEXT    | Fecha de renovación de la suscripción                 |
-| `estado`           | TEXT    | Estado de la suscripción (Activo, Pausado, Cancelado) |
-| `metodo_pago_id`   | INTEGER | Identificador del método de pago asociado             |
+#### Suscripciones
 
-#### Tabla `metodos_pago`
+| Campo             | Tipo    | Clave | Descripción                  |
+| ----------------- | ------- | ----- | ---------------------------- |
+| id                | INTEGER | PK    | Identificador de suscripción |
+| usuario\_id       | INTEGER | FK    | Usuario propietario          |
+| nombre\_servicio  | TEXT    |       | Nombre del servicio          |
+| costo\_mensual    | REAL    |       | Precio mensual               |
+| fecha\_inicio     | DATE    |       | Fecha de inicio              |
+| fecha\_renovacion | DATE    |       | Próxima renovación           |
+| estado            | TEXT    |       | Estado (Activo/Pausado)      |
+| metodo\_pago\_id  | INTEGER | FK    | Método de pago asociado      |
 
-| Columna             | Tipo    | Descripción                                                                      |
-| ------------------- | ------- | -------------------------------------------------------------------------------- |
-| `id`                | INTEGER | Identificador único del método de pago                                           |
-| `usuario_id`        | INTEGER | Identificador del usuario                                                        |
-| `nombre`            | TEXT    | Nombre del método de pago                                                        |
-| `tipo`              | TEXT    | Tipo del método de pago (Cuenta Bancaria, Tarjeta de Débito, Tarjeta de Crédito) |
-| `numero`            | TEXT    | Número del método de pago                                                        |
-| `fecha_vencimiento` | TEXT    | Fecha de vencimiento del método de pago                                          |
+***
+
+#### Metodos de pago
+
+| Campo              | Tipo    | Clave | Descripción                      |
+| ------------------ | ------- | ----- | -------------------------------- |
+| id                 | INTEGER | PK    | Identificador del método de pago |
+| usuario\_id        | INTEGER | FK    | Usuario propietario              |
+| nombre             | TEXT    |       | Nombre del método (ej: Visa)     |
+| tipo               | TEXT    |       | Tipo (Tarjeta, PayPal, etc.)     |
+| numero             | TEXT    |       | Número (enmascarado)             |
+| fecha\_vencimiento | TEXT    |       | Fecha de vencimiento             |
+
+***
+
+#### Historial de pagos
+
+| Campo            | Tipo    | Clave | Descripción            |
+| ---------------- | ------- | ----- | ---------------------- |
+| id               | INTEGER | PK    | Identificador del pago |
+| suscripcion\_id  | INTEGER | FK    | Suscripción asociada   |
+| monto            | REAL    |       | Monto pagado           |
+| fecha\_pago      | DATE    |       | Fecha del pago         |
+| metodo\_pago\_id | INTEGER | FK    | Método de pago usado   |
+
+***
+
+#### Logs
+
+| Campo       | Tipo     | Clave | Descripción                   |
+| ----------- | -------- | ----- | ----------------------------- |
+| id          | INTEGER  | PK    | Identificador del log         |
+| usuario\_id | INTEGER  | FK    | Usuario que realizó la acción |
+| accion      | TEXT     |       | Descripción de la acción      |
+| fecha       | DATETIME |       | Fecha y hora del evento       |
+
+\
